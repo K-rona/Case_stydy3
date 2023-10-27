@@ -90,5 +90,4 @@ for j in range(0, -500, -step_vertical):
 
         counting += 1
 
-
 done()
