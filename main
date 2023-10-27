@@ -48,10 +48,12 @@ def get_num_hexagons():
             print("Оно должно быть от 4 до 12\n"
                   "Пожалуйста, повторите попытку: ")
 
-    return num_hexagons
+    return int(num_hexagons)
 
 
 def draw_hexagon(x, y, side_len, color_fill):
+
+    speed(0)
     posit = pos()
     color(color_fill)
     seth(90)
@@ -72,7 +74,7 @@ def draw_hexagon(x, y, side_len, color_fill):
 
 
 color1, color2 = get_color_choice()
-N = int(get_num_hexagons())
+N = get_num_hexagons()
 side = 500/(N * sqrt(3))
 step_horizontal = int(side * sqrt(3))
 step_vertical = int(2 * side)
@@ -88,6 +90,5 @@ for j in range(0, -500, -step_vertical):
 
         counting += 1
 
-speed(0)
-done()
 
+done()
