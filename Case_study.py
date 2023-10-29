@@ -89,7 +89,7 @@ counting_row = 0
 for j in range(step_vertical*N-200, -200, -step_vertical):
 
     if counting_row % 2 == 0:
-        for i in range(0, 500, step_horizontal):
+        for i in range(-100, 500, step_horizontal):
 
             if counting_hexagons % 2 == 0:
                 draw_hexagon(i, j, side, color1)
@@ -99,7 +99,7 @@ for j in range(step_vertical*N-200, -200, -step_vertical):
             counting_hexagons += 1
 
     else:
-        for i in range(-int(side * sqrt(3))//2, 500, step_horizontal):
+        for i in range(-int(side * sqrt(3))//2-100, 500, step_horizontal):
 
             if counting_hexagons % 2 == 0:
                 draw_hexagon(i, j, side, color1)
