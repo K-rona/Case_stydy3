@@ -86,7 +86,7 @@ step_vertical = int(2 * side - side/2)
 counting_hexagons = 0
 counting_row = 0
 
-for j in range(0, -500, -step_vertical):
+for j in range(step_vertical*N-200, -200, -step_vertical):
 
     if counting_row % 2 == 0:
         for i in range(0, 500, step_horizontal):
@@ -109,6 +109,5 @@ for j in range(0, -500, -step_vertical):
             counting_hexagons += 1
 
     counting_row += 1
-
 
 done()
